@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NavegarPaginaCNT" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="985,3631" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NavegarPaginaCNT" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="985,6689" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -115,7 +115,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NavegarPaginaCNT" sap:VirtualizedContainerService.HintSize="820,3566" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NavegarPaginaCNT" sap:VirtualizedContainerService.HintSize="846,6624" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="varNombreImagen" />
       <Variable x:TypeArguments="s:String[]" Name="arrayNombresImagenes">
@@ -139,20 +139,33 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Utilizar Navegador Chrome: :: Guía Telefónica CNT EP ::" sap:VirtualizedContainerService.HintSize="758,3455" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V2">
+    <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="784,82" sap2010:WorkflowViewState.IdRef="Assign_14">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - inicia la navegación.\n"</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Ingresar web CNT" sap:VirtualizedContainerService.HintSize="784,6391" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="724,3238" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="750,6174" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NSelectItem DisplayName="Seleccionar elemento 'Criterio de Búsqueda'" sap:VirtualizedContainerService.HintSize="662,157" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Por Nombre" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
+            <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="688,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Realiza la búsqueda por nombre&#xA;" />
+            <uix:NSelectItem DisplayName="Seleccionar elemento 'Criterio de Búsqueda'" sap:VirtualizedContainerService.HintSize="688,25" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Por Nombre" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="4">
                   <x:String>-- Seleccione un criterio de Búsqueda --</x:String>
@@ -172,12 +185,13 @@
               </uix:NSelectItem.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NSelectItem>
-            <TryCatch DisplayName="Intentar capturar Provincia" sap:VirtualizedContainerService.HintSize="662,25" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="688,75" sap2010:WorkflowViewState.IdRef="Comment_2" Text="Intenta colocar la provincia digitada por el usuario&#xA;" />
+            <TryCatch DisplayName="Intentar capturar Provincia" sap:VirtualizedContainerService.HintSize="688,25" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -293,7 +307,8 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <If DisplayName="Si" sap:VirtualizedContainerService.HintSize="662,2861" sap2010:WorkflowViewState.IdRef="If_1">
+            <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="688,75" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Si no existe la provincia genera un mensaje y finaliza el proceso&#xA;" />
+            <If DisplayName="Si" sap:VirtualizedContainerService.HintSize="688,5603" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">varExisteProvincia</CSharpValue>
@@ -306,13 +321,26 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="628,2506" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="654,5126" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Apellidos'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="586,25" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
+                  <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="612,82" sap2010:WorkflowViewState.IdRef="Assign_15">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - existe la provincia.\n"</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="612,56" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Digita el apellido&#xA;" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Apellidos'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="612,25" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://micnt.com.ec/cntapp/guia104/php/guia_cntat.php?hflagsubmit=0&amp;cmbcriterio=3&amp;cmbprov2=17&amp;txtusuarioapellido=&amp;txtusuarionombre=&amp;captchaSelection=" CvElementArea="1063, 569, 205, 47" CvType="InputBox" DesignTimeRectangle="1066, 570, 200, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='form-control' aaname='' /&gt;" Guid="d7bd88c9-0730-4dfd-87f8-9ac01998ffb0" InformativeScreenshot="11aed296faefc2b7c3248273aa2896b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title=':: Guía Telefónica CNT EP ::' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -334,15 +362,29 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Hacer mientras" sap:VirtualizedContainerService.HintSize="586,1457" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                  <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="612,75" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Realiza el intento de solucionar el recaptcha hasta 3 veces&#xA;" />
+                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Tratar solucionar Recaptcha" sap:VirtualizedContainerService.HintSize="612,3248" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                     <ui:InterruptibleDoWhile.Body>
-                      <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="552,1321" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="578,3112" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGetText DisplayName="Obtener texto 'Selecciona la'" sap:VirtualizedContainerService.HintSize="510,25" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
+                        <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="536,82" sap2010:WorkflowViewState.IdRef="Assign_16">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - intento resolver recaptcha.\n"</CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="536,75" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Revisa el texto de la imagen solicitada a dar click&#xA;" />
+                        <uix:NGetText DisplayName="Obtener texto 'Selecciona la'" sap:VirtualizedContainerService.HintSize="536,25" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
                           <uix:NGetText.Target>
                             <uix:TargetAnchorable BrowserURL="https://micnt.com.ec/cntapp/guia104/php/guia_cntat.php?hflagsubmit=0&amp;cmbcriterio=3&amp;cmbprov2=17&amp;txtusuarioapellido=&amp;txtusuarionombre=&amp;captchaSelection=" CvTextArea="264, 703, 41, 13" CvType="AnyWordGroup" DesignTimeRectangle="266, 700, 39, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='captchaText' /&gt;" Guid="eed0e2bb-c02d-4093-b97e-4d1583835b65" ImageBase64="" InformativeScreenshot="c4558785570d2e28867bc64a217e2fb5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title=':: Guía Telefónica CNT EP ::' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -364,7 +406,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NGetText>
-                        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                        <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="536,132" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Se tiene un array de los nombres de las imágenes y otro array con sus números correspondientes. Si el nombre del recaptcha está dentro de nuestro array tendremos el nombre de la imagen (número)&#xA;" />
+                        <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="536,75" sap2010:WorkflowViewState.IdRef="Comment_8" Text="Extrae el indice dentro del array por el nombre de la imagen solicitada&#xA;" />
+                        <Assign DisplayName="Extraer índice de la imagen dentro de nuestro array de nombres" sap:VirtualizedContainerService.HintSize="536,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">
                               <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">varIndiceImagen</CSharpReference>
@@ -376,7 +420,7 @@
                             </InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If DisplayName="Si" sap:VirtualizedContainerService.HintSize="510,794" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If DisplayName="Si" sap:VirtualizedContainerService.HintSize="536,1004" sap2010:WorkflowViewState.IdRef="If_4">
                           <If.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
                               <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">varIndiceImagen&gt;=0</CSharpValue>
@@ -389,12 +433,25 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="476,367" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,472" sap2010:WorkflowViewState.IdRef="Sequence_12">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - existe la imagen en el array.\n"</CSharpValue>
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="434,75" sap2010:WorkflowViewState.IdRef="Comment_9" Text="Si se encuentra la imagen, se le da click en la correspondiente&#xA;" />
                               <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_8">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">
@@ -407,7 +464,7 @@
                                   </InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'IMG'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'IMG'" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://micnt.com.ec/cntapp/guia104/php/guia_cntat.php?hflagsubmit=0&amp;cmbcriterio=3&amp;cmbprov2=17&amp;txtusuarioapellido=meza&amp;txtusuarionombre=&amp;captchaSelection=" CvElementArea="178, 746, 45, 42" CvType="Icon" DesignTimeRectangle="181, 748, 40, 40" DesignTimeScaleFactor="1.25" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='captchaImage' check:text='' /&gt;" Guid="5a4364dd-3361-474d-8a14-d709f32e0772" ImageBase64="" InformativeScreenshot="aa23000bc5b523ed1804f9a86957cdcd.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title=':: Guía Telefónica CNT EP ::' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
                                     <uix:TargetAnchorable.FullSelectorArgument>
@@ -419,7 +476,7 @@
                                 </uix:NClick.Target>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -427,13 +484,26 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,350" sap2010:WorkflowViewState.IdRef="Sequence_13">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Enviar'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
+                              <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - no hay la imagen en el array.\n"</CSharpValue>
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="434,75" sap2010:WorkflowViewState.IdRef="Comment_10" Text="Si no se encuentra, se prueba dando clikc en la primera&#xA;" />
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Enviar'" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://micnt.com.ec/cntapp/guia104/php/guia_cntat.php?hflagsubmit=0&amp;cmbcriterio=3&amp;cmbprov2=17&amp;txtusuarioapellido=meza&amp;txtusuarionombre=&amp;captchaSelection=" CvElementArea="134, 745, 46, 44" CvType="Icon" DesignTimeRectangle="136, 748, 40, 40" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl tableRow='2' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='IMG' row='3' class='captchaImage' /&gt;" Guid="c3564399-ac8e-422a-9843-415424b010a2" InformativeScreenshot="9553f77b3b444a3b6a29c809d2619927.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title=':: Guía Telefónica CNT EP ::' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -443,11 +513,18 @@
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NClick.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
                               </uix:NClick>
                             </Sequence>
                           </If.Else>
                         </If>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Enviar'" sap:VirtualizedContainerService.HintSize="510,25" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
+                        <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="536,56" sap2010:WorkflowViewState.IdRef="Comment_11" Text="Se envía la busqueda&#xA;" />
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Enviar'" sap:VirtualizedContainerService.HintSize="536,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://micnt.com.ec/cntapp/guia104/php/guia_cntat.php?hflagsubmit=0&amp;cmbcriterio=3&amp;cmbprov2=17&amp;txtusuarioapellido=MEZA&amp;txtusuarionombre=&amp;captchaSelection=" CvElementArea="291, 789, 84, 45" CvTextArea="308, 802, 53, 17" CvTextArgument="Enviar" CvType="Button" DesignTimeRectangle="294, 792, 81, 42" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='BUTTON' class='btn btn-primary' aaname='Enviar' check:innerText='Enviar' /&gt;" Guid="d5a7f77c-c514-4126-a74a-8f0a197a3349" InformativeScreenshot="36513415daa21b860e9bcf181be145a1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title=':: Guía Telefónica CNT EP ::' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -459,20 +536,21 @@
                           </uix:NClick.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <TryCatch DisplayName="Intentar capturar" sap:VirtualizedContainerService.HintSize="510,25" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                        <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="536,75" sap2010:WorkflowViewState.IdRef="Comment_13" Text="Si aparece el mensaje de que la imagen no es válida, entonces no se superó el recaptcha&#xA;" />
+                        <TryCatch DisplayName="Intentar capturar" sap:VirtualizedContainerService.HintSize="536,643" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="496,390" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="496,512" sap2010:WorkflowViewState.IdRef="Sequence_14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -499,13 +577,25 @@
                                   <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - no se solucionó el recaptcha.\n"</CSharpValue>
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
                             </Sequence>
                           </TryCatch.Try>
                           <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,480" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -513,21 +603,43 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                 </ActivityAction.Argument>
-                                <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Boolean">
-                                      <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">varPasoCaptcha</CSharpReference>
-                                    </OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                  </Assign.Value>
-                                </Assign>
+                                <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="496,411" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - se pasó el recaptcha.\n"</CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="434,56" sap2010:WorkflowViewState.IdRef="Comment_12" Text="Se pasó exitosamente el recaptcha&#xA;" />
+                                  <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">
+                                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">varPasoCaptcha</CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
                               </ActivityAction>
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_11">
+                        <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="536,56" sap2010:WorkflowViewState.IdRef="Comment_14" Text="Vamos sumando los intentos hasta llegar a 3&#xA;" />
+                        <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="536,82" sap2010:WorkflowViewState.IdRef="Assign_11">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">
                               <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">varNumeroIntentos</CSharpReference>
@@ -551,7 +663,8 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InterruptibleDoWhile>
-                  <If DisplayName="Si" sap:VirtualizedContainerService.HintSize="586,856" sap2010:WorkflowViewState.IdRef="If_5">
+                  <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="612,75" sap2010:WorkflowViewState.IdRef="Comment_15" Text="Verifica si pasó el recaptcha dentro de los tres intentos&#xA;" />
+                  <If DisplayName="Si" sap:VirtualizedContainerService.HintSize="612,1237" sap2010:WorkflowViewState.IdRef="If_5">
                     <If.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
                         <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">varPasoCaptcha</CSharpValue>
@@ -564,7 +677,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,379" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,583" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="tablaCNT" />
                         </Sequence.Variables>
@@ -573,7 +686,20 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-0' ReferenceName='Column-0' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-1' ReferenceName='Column-1' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-2' ReferenceName='Column-2' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-3' ReferenceName='Column-3' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' /&gt;&lt;column name='Column-3' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Page" MaximumResults="20" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Version="V3">
+                        <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_22">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - solucionó el recaptcha dentro de los tres intentos.\n"</CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="434,56" sap2010:WorkflowViewState.IdRef="Comment_16" Text="Si pasó extrae los datos, los filtra y los ordena&#xA;" />
+                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-0' ReferenceName='Column-0' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-1' ReferenceName='Column-1' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-2' ReferenceName='Column-2' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-3' ReferenceName='Column-3' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' /&gt;&lt;column name='Column-3' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Page" MaximumResults="20" ScopeIdentifier="b4449f12-249d-45c4-b48b-2483fb596f7b" Timeout="10" Version="V3">
                           <uix:NExtractData.DataTable>
                             <InOutArgument x:TypeArguments="sd:DataTable">
                               <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">GlobalVariablesNamespace.GlobalVariables.varTablaContactos</CSharpReference>
@@ -592,7 +718,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NExtractData>
-                        <ui:FilterDataTable DisplayName="Filtrar tabla de datos" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,161" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
+                        <ui:FilterDataTable DisplayName="Filtrar tabla de datos" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
                           <ui:FilterDataTable.DataTable>
                             <InArgument x:TypeArguments="sd:DataTable">
                               <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">GlobalVariablesNamespace.GlobalVariables.varTablaContactos</CSharpValue>
@@ -624,6 +750,18 @@
                                   </InArgument>
                                 </ui:FilterOperationArgument.Operand>
                               </ui:FilterOperationArgument>
+                              <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                <ui:FilterOperationArgument.Column>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">"Column-0"</CSharpValue>
+                                  </InArgument>
+                                </ui:FilterOperationArgument.Column>
+                                <ui:FilterOperationArgument.Operand>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">"No hay"</CSharpValue>
+                                  </InArgument>
+                                </ui:FilterOperationArgument.Operand>
+                              </ui:FilterOperationArgument>
                             </scg:List>
                           </ui:FilterDataTable.Filters>
                           <ui:FilterDataTable.OutputDataTable>
@@ -638,12 +776,12 @@
                           </ui:FilterDataTable.SelectColumns>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:FilterDataTable>
-                        <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DisplayName="Ordenar tabla de datos" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Decending" SortOrder="Descending">
+                        <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DisplayName="Ordenar tabla de datos" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Decending" SortOrder="Descending">
                           <ui:SortDataTable.ColumnIndex>
                             <InArgument x:TypeArguments="s:Nullable(x:Int32)">
                               <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="3" />
@@ -666,21 +804,52 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:SortDataTable>
+                        <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_23">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - se extrae los registros.\n"</CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476,295" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,472" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_8">
+                        <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_24">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - no se solucionó el recaptcha en ninguno de los tres intentos.\n"</CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="434,75" sap2010:WorkflowViewState.IdRef="Comment_17" Text="Si no pasa se notifica como mensaje al usuario y finaliza el proceso&#xA;" />
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="MessageBox_8">
                           <ui:MessageBox.Text>
                             <InArgument x:TypeArguments="x:Object">
                               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">"No se logró pasar el recaptcha en ninguno de los tres intentos."</CSharpValue>
                             </InArgument>
                           </ui:MessageBox.Text>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </ui:MessageBox>
                         <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_13">
                           <Assign.To>
@@ -698,13 +867,25 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,173" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,295" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Información" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+                  <Assign DisplayName="Log" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_19">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">GlobalVariablesNamespace.GlobalVariables.varLog</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">GlobalVariablesNamespace.GlobalVariables.varLog+DateTime.Now.ToString("yyyyMMdd_HHmmss")+" - "+"NAVEGACION CNT - no existe la provincia.\n"</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Información" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_1">
                     <ui:MessageBox.Text>
                       <InArgument x:TypeArguments="x:Object">
                         <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"No se encontró la provincia: " +GlobalVariablesNamespace.GlobalVariables.varProvincia</CSharpValue>

@@ -1,0 +1,141 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varRutaCarpetaReportes&",
+        "varLog&",
+        "varRutaCarpetaLogs&",
+        "varErrorNavegador&",
+        "varTablaContactos&",
+        "varCorreo&",
+        "varProvincia&",
+        "varApellido&"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varExisteCarpetaLogs&Sequence_1",
+        "varCorreo&Sequence_10",
+        "varProvincia&Sequence_10",
+        "varApellido&Sequence_10",
+        "varErrorNavegador&Sequence_10",
+        "varTablaContactos&Sequence_10",
+        "varRutaCarpetaReportes&Sequence_10",
+        "varLog&Sequence_10",
+        "varRutaCarpetaLogs&Sequence_10"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ObtenerDatosIniciales.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varCorreo&Sequence_10",
+        "varProvincia&Sequence_10",
+        "varApellido&Sequence_10",
+        "varErrorNavegador&Sequence_10",
+        "varTablaContactos&Sequence_10",
+        "varRutaCarpetaReportes&Sequence_10",
+        "varLog&Sequence_10",
+        "varRutaCarpetaLogs&Sequence_10",
+        "coincidenciaProvincia&Sequence_1",
+        "coincidenciaCorreo&Sequence_1",
+        "_out_IsMatch_1__Result&Sequence_1",
+        "_out_IsMatch_2__Result&Sequence_1",
+        "_out_IsMatch_3__Result&Sequence_1",
+        "coincidenciaApellido&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "NavegarPaginaCNT.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varCorreo&Sequence_10",
+        "varProvincia&Sequence_10",
+        "varApellido&Sequence_10",
+        "varErrorNavegador&Sequence_10",
+        "varTablaContactos&Sequence_10",
+        "varRutaCarpetaReportes&Sequence_10",
+        "varLog&Sequence_10",
+        "varRutaCarpetaLogs&Sequence_10",
+        "varNombreImagen&Sequence_1",
+        "arrayNombresImagenes&Sequence_1",
+        "arrayNumerosImagenes&Sequence_1",
+        "varIndiceImagen&Sequence_1",
+        "varNumeroImagen&Sequence_1",
+        "varPasoCaptcha&Sequence_1",
+        "varNumeroIntentos&Sequence_1",
+        "varExisteProvincia&Sequence_1",
+        "tablaCNT&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CrearReporteExcel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varCorreo&Sequence_10",
+        "varProvincia&Sequence_10",
+        "varApellido&Sequence_10",
+        "varErrorNavegador&Sequence_10",
+        "varTablaContactos&Sequence_10",
+        "varRutaCarpetaReportes&Sequence_10",
+        "varLog&Sequence_10",
+        "varRutaCarpetaLogs&Sequence_10",
+        "varExisteArchivo&Sequence_1",
+        "varExisteCarpetaReportes&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "EnviarCorreo.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varCorreo&Sequence_10",
+        "varProvincia&Sequence_10",
+        "varApellido&Sequence_10",
+        "varErrorNavegador&Sequence_10",
+        "varTablaContactos&Sequence_10",
+        "varRutaCarpetaReportes&Sequence_10",
+        "varLog&Sequence_10",
+        "varRutaCarpetaLogs&Sequence_10"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "~EnviarCorreo.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varCorreo&Sequence_7",
+        "varProvincia&Sequence_7",
+        "varApellido&Sequence_7",
+        "varErrorNavegador&Sequence_7",
+        "varTablaContactos&Sequence_7",
+        "varRutaCarpetaReportes&Sequence_7",
+        "varLog&Sequence_7",
+        "varRutaCarpetaLogs&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
